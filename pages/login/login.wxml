@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+<view class='container'>
+  <view class='logo'></view>
+  <view class='title'>全民找群欢迎你</view>
+  <view class='add'>请微信授权登录后放心使用全民找群 你的信息和数据将受到保护
+  </view>
+  <block wx:if="{{color == 0}}">
+  <button open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo" style="background:#10B4FC;">
+    <image src='https://qmzgcdn.boc7.net/test/weixin.png'></image>
+    <text>微信授权登录</text>
+  </button>
+  </block>
+  <block wx:if="{{color == 1}}">
+  <button style="background:#DEDEDE;">
+    <image src='https://qmzgcdn.boc7.net/test/weixin.png'></image>
+    <text>微信授权登录</text>
+  </button>
+  </block>
+  <view style="opacity:0.9;top:0;background:#fff;width:100%;height:100%;position:absolute;z-index:1;" hidden="{{ loadingHidden }}">
+    <loading>
+        加载中...
+    </loading>
+  </view>
+</view>

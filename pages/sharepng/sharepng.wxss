@@ -1,0 +1,158 @@
+/* pages/sharepng/sharepng.wxss */
+page {
+  background: #ffffff;
+}
+
+.poster{
+  width:690rpx;
+  height:980rpx;
+  margin: 0 auto;
+  background-image: url('https://qmzgcdn.boc7.net/qmzq/posterback.png');
+  background-size:100% 100%;
+  margin-top:40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.poster>view:nth-child(1){
+  width:110rpx;
+  height:110rpx;
+  background:#ffffff;
+  border-radius:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40rpx 0 20rpx;
+}
+
+.poster>view:nth-child(1)>image{
+  width:106rpx;
+  height:106rpx;
+  border-radius:50%;
+}
+
+.poster>text:nth-child(2){
+  font-family:MicrosoftYaHei;font-size:28rpx;color:#ffffff;
+}
+
+.poster>text:nth-child(3){
+  font-family:MicrosoftYaHei;font-size:32rpx;color:#ffffff;
+  margin: 20rpx 0 40rpx;
+}
+
+.poster>view:nth-child(4){
+  width:600rpx;
+  height:370rpx;
+  background:#ffffff;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-between;
+  box-sizing: border-box;
+  padding: 50rpx 44rpx 44rpx;
+}
+
+.poster>view:nth-child(4)>view{
+  box-sizing: border-box;
+  padding-left: 160rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 46rpx;
+}
+
+.poster>view:nth-child(4)>view>image{
+  width:160rpx;
+  height:160rpx;
+  border-radius: 10rpx;
+  margin-left:-160rpx;
+}
+
+.poster>view:nth-child(4)>view>view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 38rpx;
+  width:100%;
+}
+
+.poster>view:nth-child(4)>view>view>text{
+  color:#1A1A1A;
+  font-size:32rpx;
+  font-family: SourceHanSansCN-Regular;
+}
+
+.poster>view:nth-child(4)>view>view>view{
+  /* display: flex;justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start; */
+  margin-top: 20rpx;
+}
+
+.poster>view:nth-child(4)>view>view>view>image{
+  width:22rpx;
+  height:28rpx;
+  margin-top:16rpx;
+  float:left;
+}
+
+.poster>view:nth-child(4)>view>view>view>text{
+  color:#999999;
+  font-size:26rpx;
+  font-family: SourceHanSansCN-Regular;
+  margin-left: 10rpx;
+}
+
+.poster>view:nth-child(4)>text{
+  color:#3A404C;
+  font-size:28rpx;
+  font-family: SourceHanSansCN-Regular;
+  /* text-overflow: -o-ellipsis-lastline; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  /* word-wrap:normal;
+  white-space: nowrap; */
+}
+
+.poster>view:nth-child(5){
+  width:166rpx;
+  height:166rpx;
+  background:#ffffff;
+  border-radius:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 38rpx 0 26rpx;
+}
+
+.poster>view:nth-child(5)>image{
+  width:142rpx;
+  height:142rpx;
+  border-radius:50%;
+}
+
+.poster>text:nth-child(6){
+  font-family:MicrosoftYaHei;font-size:24rpx;color:#EAF9FF;
+}
+
+.savebutton{
+  width:382rpx;height:82rpx;line-height:82rpx;
+  background: transparent;
+  background-image: url('https://qmzgcdn.boc7.net/qmzq/btn_save1.png');
+  background-size:100% 100%;
+  font-family:MicrosoftYaHei;font-size:30rpx;color:#ffffff;
+  margin-top:54rpx;
+  margin-bottom: 20rpx;
+  border:0;
+}
+
+.savebutton::after{
+  border:0;
+}

@@ -1,0 +1,3 @@
+<!--pages/index/tutorialjoing.wxml-->
+<view class="joingroup"></view>
+<view class="joingroup" style="height:1430rpx;background-image:url('https://qmzgcdn.boc7.net/qmzq/joingroup_scancode2.png');"></view>

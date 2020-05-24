@@ -1,0 +1,425 @@
+/* pages/more/more.wxss */
+
+page {
+  background: #F5F7F7;
+}
+
+.searchgroup{
+  width:100%;
+  height:106rpx;
+  background:#10B4FC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchgroup>view{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #ffffff;
+  width: 584rpx;
+  height: 64rpx;
+  border-radius:32rpx;
+}
+
+.searchgroup>view>image{
+  width: 24rpx;
+  height:24rpx;
+  margin-left: 46rpx;
+}
+
+.searchgroup>view>input{
+  width: 470rpx;
+  height:64rpx;
+  margin-left:16rpx;
+  font-family:SourceHanSansCN-Regular;color:#1A1A1A;font-size:28rpx;
+}
+
+.searchgroup>navigator{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 28rpx;
+}
+
+.searchgroup>navigator>image{
+  width:38rpx;
+  height:38rpx;
+}
+
+.searchgroup>navigator>text{
+  font-family: SourceHanSansCN-Regular;
+  font-size:20rpx;
+  color:#ffffff;
+  margin-top:6rpx;
+}
+
+.rotor {
+  width: 100%;
+  height: 70rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.rotor>image{
+  width:32rpx;
+  height:28rpx;
+  margin: 22rpx 26rpx 22rpx 30rpx;
+}
+
+.notifytext{
+  font-size: 24rpx;
+  font-family: MicrosoftYaHei;
+  color: #666666;
+  width:90%;
+  height:70rpx;
+  line-height: 70rpx;
+}
+
+.scantitle{
+  font-family:SourceHanSansCN-Regular;
+  font-size:32rpx;
+  color:#1A1A1A;
+  display:flex;justify-content:flex-start;align-items:center;
+  padding:0 30rpx;
+  height: 90rpx;
+}
+.scantitle>view{
+  width:8rpx;height:30rpx;
+  background:#10B4FC;margin-right:12rpx;
+}
+
+.businesscard{
+  width:100%;height:180rpx;
+  background:#ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20rpx 0 30rpx;
+  position: relative;
+}
+
+.businesscard>view:nth-child(1){
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.businesscard>view:nth-child(3){
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  margin: auto;
+  transform: scale(1,0.5);
+  width: 690rpx;
+  height:1px;
+  background: #EDEDED;
+}
+
+.businesscard>view:nth-child(1)>image{
+  width:180rpx;height:120rpx;
+  border-radius: 10rpx;
+}
+
+.businesscard>view:nth-child(1)>view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 26rpx;
+}
+
+.businesscard>view:nth-child(1)>view>text{
+  color:#1A1A1A;
+  font-size:32rpx;
+  font-family: SourceHanSansCN-Regular;
+}
+
+.businesscard>view:nth-child(1)>view>view{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top:18rpx;
+}
+
+.businesscard>view:nth-child(1)>view>view>view{
+  border-radius: 22rpx;
+  border:1px solid #FF9642;
+  color:#FF9642;
+  font-size:24rpx;
+  font-family: SourceHanSansCN-Regular;
+  text-align: center;
+  margin: 0 6rpx;
+  padding: 0rpx 12rpx 4rpx;
+}
+
+.businesscard>view:nth-child(1)>view>view>view:nth-child(1){
+  margin-left:0;
+}
+
+.businesscard>navigator,.groupuptodate>view:nth-child(3)>navigator{
+  width:154rpx;height:54rpx;line-height:54rpx;
+  border-radius: 28rpx;
+  background: #10B4FC; 
+  color:#ffffff;
+  font-size:26rpx;
+  font-family: SourceHanSansCN-Regular;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border:0;
+  margin-top:54rpx;
+}
+
+.groupuptodate>view:nth-child(1)>button::after{
+  border:0;
+}
+
+.groupuptodate{
+  width:100%;
+  /* height:440rpx; */
+  background:#ffffff;
+  box-sizing: border-box;
+  padding: 32rpx 30rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  margin-bottom: 20rpx;
+}
+
+.groupuptodate>view:nth-child(1){
+  /* width:100%; */
+  /* height:120rpx; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.groupuptodate>view:nth-child(1)>view{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.groupuptodate>view:nth-child(1)>view>image{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+}
+
+.groupuptodate>view:nth-child(1)>view>view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 22rpx;
+}
+
+.groupuptodate>view:nth-child(1)>view>view>text:nth-child(1){
+  color:#1A1A1A;
+  font-size:28rpx;
+  font-family: MicrosoftYaHei;
+}
+
+.groupuptodate>view:nth-child(1)>view>view>text:nth-child(2){
+  color:#999999;
+  font-size:26rpx;
+  font-family: SourceHanSansCN-Regular;
+  margin-top:4rpx;
+}
+
+.groupuptodate>view:nth-child(1)>button{
+  width:32rpx;
+  height:30rpx;
+  background: transparent;
+  background-image: url('https://qmzgcdn.boc7.net/qmzq/groupdetailshare.png');
+  background-size:100% 100%;
+  padding: 0;
+  margin: 0;
+  border:0;
+  border-radius: 0;
+}
+
+.groupuptodate>view:nth-child(2){
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 30rpx;
+  box-sizing:border-box;
+  padding-left:180rpx;
+}
+
+.groupuptodate>view:nth-child(2)>image{
+  width:180rpx;
+  height:180rpx;
+  border-radius: 10rpx;margin-left:-180rpx;
+}
+
+.groupuptodate>view:nth-child(2)>view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 30rpx;
+  width:100%;
+}
+
+.groupuptodate>view:nth-child(2)>view>text:nth-child(1){
+  color:#1A1A1A;
+  font-size:32rpx;
+  font-family: SourceHanSansCN-Regular;
+}
+
+.groupuptodate>view:nth-child(2)>view>view{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin:16rpx 0;
+}
+
+.groupuptodate>view:nth-child(2)>view>view>view{
+  border-radius: 22rpx;
+  border:1px solid #FF9642;
+  color:#FF9642;
+  font-size:24rpx;
+  font-family: SourceHanSansCN-Regular;
+  text-align: center;
+  margin: 0 6rpx;
+  padding: 0rpx 14rpx 4rpx;
+}
+
+.groupuptodate>view:nth-child(2)>view>view>view:nth-child(1){
+  margin-left: 0;
+}
+
+.groupuptodate>view:nth-child(2)>view>text:nth-child(3){
+  color:#808080;
+  font-size:24rpx;
+  font-family: SourceHanSansCN-Regular;
+}
+
+.groupuptodate>view:nth-child(3){
+  /* width:100%; */
+  height:94rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 34rpx;
+}
+
+.groupuptodate>view:nth-child(3)>view:nth-child(1){
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  margin: auto;
+  transform: scale(1,0.5);
+  width: 690rpx;
+  height:1px;
+  background: #EDEDED;
+}
+
+.groupuptodate>view:nth-child(3)>view:nth-child(2){
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.groupuptodate>view:nth-child(3)>view:nth-child(2)>image{
+  width:18rpx;
+  height:24rpx;
+}
+
+.groupuptodate>view:nth-child(3)>view:nth-child(2)>text{
+  color:#999999;
+  font-size:26rpx;
+  font-family: SourceHanSansCN-Regular;
+  margin-left: 10rpx;
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.bags {
+  width: 600rpx;
+  height: 280rpx;
+  z-index: 1000;
+  background:#ffffff;
+  border-radius: 16rpx;
+  position: fixed;
+  top:0;
+  bottom:0;
+  left: 0;right:0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing:border-box;
+  padding:70rpx 0 20rpx;
+}
+
+.bags>text{
+  color:#333333;
+  font-size:26rpx;
+}
+
+.bags>button{
+  color:#ffffff;
+  font-size:26rpx;
+  width: 300rpx;
+  height:68rpx;
+  border-radius: 34rpx;
+  background-image: url('https://qmzgcdn.boc7.net/qmzq/btn_confirm.png');
+  background-size:100% 100%;
+  border:0;
+}
+
+.bags>button::after{
+  border:0;
+}
+
+.closepos{
+  position:absolute;
+  width:40rpx;height:40rpx;
+  top:34rpx;right:34rpx;
+}
+
+.share_button{
+  width:100%;height:320rpx;
+  position:fixed;bottom:0;left:0;
+  background:#EFEFEF;
+}
+.share_button>button,.share_button>navigator{
+  width:100%;height:100rpx;
+  padding: 0;
+  margin: 0;
+  background:#ffffff;
+  border-top:1px solid #EFEFEF;
+  border-radius: 0;
+  font-size:36rpx;
+  background-image: url('https://qmzgcdn.boc7.net/qmzq/invite_webchat1.png');
+  background-size: 52rpx 52rpx;
+  background-repeat: no-repeat;
+  background-position: 204rpx 20rpx;
+}
+.share_button>button::after{
+  border:0;
+  border-radius: 0;
+}

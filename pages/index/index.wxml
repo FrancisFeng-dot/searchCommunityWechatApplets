@@ -1,0 +1,83 @@
+<navigator target="miniProgram" path="track=test2" app-id="wx915d2fab1028ac00" style="width:200rpx;height:200rpx;background-image:url('https://qmzgcdn.boc7.net/welfare/free_game/myself_redbagicon.png');background-size:100% 100%;"></navigator>
+<view class="searchgroup">
+  <view>
+    <image src="https://qmzgcdn.boc7.net/qmzq/searchframe1.png"></image>
+    <input name="searchcode" bindtap="focusinput" placeholder="搜索群名、关键词" placeholder-style="font-family:SourceHanSansCN-Regular;font-size:28rpx;color:#B3B3B3;"></input>
+  </view>
+  <navigator url="./tutorialjoing" open-type="navigate">
+    <image src="https://qmzgcdn.boc7.net/qmzq/jgrouptutorial.png"></image>
+    <text>加群教程</text>
+  </navigator>
+</view>
+<!-- <view class='rotor'>
+  <image src="https://qmzgcdn.boc7.net/qmzq/detailnotice.png"></image>
+  <swiper autoplay="false" interval="2500" duration="8000" circular="true" next-margin="320rpx" class="notifytext">  
+    <block wx:for="{{speaknotify}}">  
+      <swiper-item>  
+      <block wx:if="{{item.type == 0}}">
+        <text>{{item.wx_nickname}}成功兑换了{{item.goods_name}}</text>
+        </block>
+      <block wx:if="{{item.type == 1}}">
+        <text>{{item.wx_nickname}}抽中了{{item.goods_name}}</text>
+      </block>
+      </swiper-item>  
+    </block>  
+  </swiper>  
+</view> -->
+<view class="scantitle"><view></view>群推荐</view>
+<view class="businesscard" wx:for="{{recommendgroup}}">
+  <view>
+    <image src="{{item.group_logo}}"></image>
+    <view>
+      <text>{{item.group_name}}</text>
+      <view>
+        <view wx:for="{{item.tag}}" wx:for-item="tag">{{tag.tag_name}}</view>
+      </view>
+    </view>
+  </view>
+  <navigator url="../groupdetail/groupdetail?id={{item.id}}" open-type='navigate'>一键加群</navigator>
+  <view></view>
+</view>
+<view class="scantitle"><view></view>最新发布</view>
+<view class="groupuptodate" wx:for="{{uptodategroup}}">
+  <view>
+    <view>
+      <image src="{{item.headimgurl}}"></image>
+      <view>
+        <text>{{item.nickname}}</text>
+        <text>{{item.ctime}} 发布</text>
+      </view>
+    </view>
+    <button bindtap='closemask' data-requestid="{{item.id}}"></button>
+  </view>
+  <view>
+    <image src="{{item.group_logo}}"></image>
+    <view>
+      <text>{{item.group_name}}</text>
+      <view>
+        <view wx:for="{{item.tag}}" wx:for-item="tag">{{tag.tag_name}}</view>
+      </view>
+      <text>群简介：{{item.group_desc}}</text>
+    </view>
+  </view>
+  <view>
+    <view></view>
+    <view>
+      <image src="https://qmzgcdn.boc7.net/qmzq/add_beforerelease.png"></image>
+      <text>{{item.location}}</text>
+    </view>
+    <navigator url="../groupdetail/groupdetail?id={{item.id}}" open-type='navigate' style="margin-top:0;">一键加群</navigator>
+  </view>
+</view>
+<view class='mask' hidden='{{masklayer}}'>
+  <view class="share_button">
+    <button open-type='share'>邀请微信好友</button>
+    <navigator url="{{hastoken==1?'../sharepng/sharepng?id='+getqrid:'../login/login'}}" open-type="navigate" style="line-height:100rpx;text-align:center;background-image: url('https://qmzgcdn.boc7.net/qmzq/invite_poster1.png');background-position: 204rpx 24rpx;">生成分享图片</navigator>
+    <button style="margin-top:20rpx;background-image: url('');" bindtap="closemask">关闭</button>
+  </view>
+  <!-- <view class='bags'>
+    <image src="https://qmzgcdn.boc7.net/test/alert_close.png" class="closepos" bindtap='closemask'></image>
+    <text>在客服会话页面回复“1”，加入助攻拼团群</text>
+    <button open-type="contact" session-from="{{contactparams}}">确定</button>
+  </view> -->
+</view>

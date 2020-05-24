@@ -1,0 +1,302 @@
+/* pages/index/choicelabel.wxss */
+page{
+  background: #F5F7F7;
+}
+
+.searchgroup{
+  width:100%;
+  height:106rpx;
+  background:#10B4FC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchgroup>view:nth-child(1){
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #ffffff;
+  width: 584rpx;
+  height: 64rpx;
+  border-radius:32rpx;
+}
+
+.searchgroup>view:nth-child(1)>image{
+  width: 24rpx;
+  height:24rpx;
+  margin-left: 46rpx;
+}
+
+.searchgroup>view:nth-child(1)>input{
+  width: 470rpx;
+  height:64rpx;
+  margin-left:16rpx;
+  font-family:SourceHanSansCN-Regular;color:#1A1A1A;font-size:28rpx;
+}
+
+.searchgroup>view:nth-child(2){
+  font-family:SourceHanSansCN-Regular;color:#ffffff;font-size:32rpx;margin-left: 32rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+
+.choicelabel{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top:18rpx;
+  flex-wrap:wrap;
+}
+
+.choicelabel>view{
+  border-radius: 28rpx;
+  border:1px solid #cccccc;
+  color:#333333;
+  font-size:26rpx;
+  font-family: SourceHanSansCN-Regular;
+  text-align: center;
+  margin: 0 24rpx 20rpx 0;
+  padding: 6rpx 30rpx 10rpx;
+}
+
+.choicelabel>view:nth-child(1){
+  margin-left: 0;
+}
+
+.groupuptodate{
+  width:100%;
+  /* height:440rpx; */
+  background:#ffffff;
+  box-sizing: border-box;
+  padding: 32rpx 30rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  margin-top: 20rpx;
+}
+
+.groupuptodate>view:nth-child(1){
+  /* width:100%; */
+  /* height:120rpx; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.groupuptodate>view:nth-child(1)>view{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.groupuptodate>view:nth-child(1)>view>image{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+}
+
+.groupuptodate>view:nth-child(1)>view>view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 22rpx;
+}
+
+.groupuptodate>view:nth-child(1)>view>view>text:nth-child(1){
+  color:#1A1A1A;
+  font-size:28rpx;
+  font-family: MicrosoftYaHei;
+}
+
+.groupuptodate>view:nth-child(1)>view>view>text:nth-child(2){
+  color:#999999;
+  font-size:26rpx;
+  font-family: SourceHanSansCN-Regular;
+  margin-top:4rpx;
+}
+
+.groupuptodate>view:nth-child(1)>button{
+  width:32rpx;
+  height:30rpx;
+  background: transparent;
+  background-image: url('https://qmzgcdn.boc7.net/qmzq/groupdetailshare.png');
+  background-size:100% 100%;
+  padding: 0;
+  margin: 0;
+  border:0;
+  border-radius: 0;
+}
+
+.groupuptodate>view:nth-child(1)>button::after{
+  border:0;
+}
+
+.groupuptodate>view:nth-child(2){
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 30rpx;
+  box-sizing:border-box;
+  padding-left:180rpx;
+}
+
+.groupuptodate>view:nth-child(2)>image{
+  width:180rpx;
+  height:180rpx;
+  border-radius: 10rpx;margin-left:-180rpx;
+}
+
+.groupuptodate>view:nth-child(2)>view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 30rpx;
+  width:100%;
+}
+
+.groupuptodate>view:nth-child(2)>view>text:nth-child(1){
+  color:#1A1A1A;
+  font-size:32rpx;
+  font-family: SourceHanSansCN-Regular;
+}
+
+.groupuptodate>view:nth-child(2)>view>view{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin:16rpx 0;
+}
+
+.groupuptodate>view:nth-child(2)>view>view>view{
+  border-radius: 22rpx;
+  border:1px solid #FF9642;
+  color:#FF9642;
+  font-size:24rpx;
+  font-family: SourceHanSansCN-Regular;
+  text-align: center;
+  margin: 0 6rpx;
+  padding: 0rpx 14rpx 4rpx;
+}
+
+.groupuptodate>view:nth-child(2)>view>view>view:nth-child(1){
+  margin-left: 0;
+}
+
+.groupuptodate>view:nth-child(2)>view>text:nth-child(3){
+  color:#808080;
+  font-size:24rpx;
+  font-family: SourceHanSansCN-Regular;
+}
+
+.groupuptodate>view:nth-child(3){
+  /* width:100%; */
+  height:94rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 34rpx;
+}
+
+.groupuptodate>view:nth-child(3)>view:nth-child(1){
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  margin: auto;
+  transform: scale(1,0.5);
+  width: 690rpx;
+  height:1px;
+  background: #EDEDED;
+}
+
+.groupuptodate>view:nth-child(3)>view:nth-child(2){
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.groupuptodate>view:nth-child(3)>view:nth-child(2)>image{
+  width:18rpx;
+  height:24rpx;
+}
+
+.groupuptodate>view:nth-child(3)>view:nth-child(2)>text{
+  color:#999999;
+  font-size:26rpx;
+  font-family: SourceHanSansCN-Regular;
+  margin-left: 10rpx;
+}
+
+.groupuptodate>view:nth-child(3)>navigator{
+  width:154rpx;height:54rpx;line-height:54rpx;
+  border-radius: 28rpx;
+  background: #10B4FC; 
+  color:#ffffff;
+  font-size:26rpx;
+  font-family: SourceHanSansCN-Regular;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border:0;
+  margin-top:54rpx;
+}
+
+.norecord{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200rpx;
+}
+
+.norecord>image{
+  width: 196rpx;
+  height: 140rpx;
+  margin-bottom: 50rpx;
+}
+
+.norecord>text{
+  color:#999999;
+  font-size:30rpx;
+  font-family: SourceHanSansCN-Regular;
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.share_button{
+  width:100%;height:220rpx;
+  position:fixed;bottom:0;left:0;
+  background:#EFEFEF;
+}
+.share_button>button,.share_button>navigator{
+  width:100%;height:100rpx;
+  padding: 0;
+  margin: 0;
+  background:#ffffff;
+  border-top:1px solid #EFEFEF;
+  border-radius: 0;
+  font-size:36rpx;
+  background-image: url('https://qmzgcdn.boc7.net/qmzq/invite_webchat1.png');
+  background-size: 52rpx 52rpx;
+  background-repeat: no-repeat;
+  background-position: 204rpx 20rpx;
+}
+.share_button>button::after{
+  border:0;
+  border-radius: 0;
+}

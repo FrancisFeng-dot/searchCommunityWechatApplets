@@ -1,0 +1,97 @@
+/* pages/usercenter/usercenter.wxss */
+page {
+  overflow-y: auto;
+  background: #F7F7F7;
+}
+
+.container {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position:relative;
+}
+
+.userinfo{
+  width:100%;
+  height:320rpx;
+  background:#ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+.userinfo>image{
+  width:160rpx;
+  height:160rpx;
+  border-radius:50%;
+}
+
+.userinfo>text{
+  font-family: MicrosoftYaHei;
+  font-size:36rpx;
+  color:#1A1A1A;
+  margin-top: 22rpx;
+}
+
+.speakingcontact{
+  width:100%;height:110rpx;
+  background:#ffffff;
+  margin-top:20rpx;
+  box-sizing:border-box;
+  padding:0 30rpx;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border:0;
+  border-radius: 0;
+  position: relative;
+}
+
+.speakingcontact::after{
+  border:0;
+}
+
+.speakingcontact>view{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+.speakingcontact>view:nth-child(3){
+  position: absolute;
+  bottom:0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width:682rpx;
+  height:1px;
+  transform: scale(1,0.5);
+  background: #EBEBEB;
+}
+
+.speakingcontact>view>image{
+  width:44rpx;
+  height:44rpx;
+}
+
+.speakingcontact>view>text{
+  font-family: MicrosoftYaHei;
+  font-size:30rpx;
+  color:#1A1A1A;
+  margin-left: 30rpx;
+}
+
+.speakingcontact>view>view{
+  width:10rpx;
+  height:10rpx;
+  border-radius:50%;
+  background: #FF3434;
+  margin: 0 0 12rpx 8rpx;
+}
+
+.speakingcontact>image{
+  width:16rpx;
+  height:28rpx;
+}

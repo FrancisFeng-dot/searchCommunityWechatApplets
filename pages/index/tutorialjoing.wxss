@@ -1,0 +1,14 @@
+/* pages/index/tutorialjoing.wxss */
+page{
+  background: #F5F7F7;
+}
+.joingroup{
+  width:670rpx;
+  height:1410rpx;
+  background:#ffffff;
+  border-radius:20rpx;
+  margin:0 auto;
+  margin-top:40rpx;
+  background-image:url('https://qmzgcdn.boc7.net/qmzq/joingroup_scancode1.png');
+  background-size:100% 100%;
+}

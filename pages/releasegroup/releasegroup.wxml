@@ -1,0 +1,170 @@
+<!--pages/releasegroup/releasegroup.wxml-->
+<view class="releaseinfo" hidden="{{is_submit}}">
+  <view>
+    <view style="background:{{color1==1?'#10B4FC':'#F0F3F1'}};color:{{color1==1?'#ffffff':'#10B4FC'}};">1</view>
+    <text>基本信息</text>
+  </view>
+  <view>
+    <view style="background:{{color2==1?'#10B4FC':'#F0F3F1'}};color:{{color2==1?'#ffffff':'#10B4FC'}};">2</view>
+    <text>上传图片</text>
+  </view>
+  <view>
+    <view style="background:{{color3==1?'#10B4FC':'#F0F3F1'}};color:{{color3==1?'#ffffff':'#10B4FC'}};">3</view>
+    <text>发布预览</text>
+  </view>
+  <view></view>
+</view>
+<form hidden="{{is_submit}}" bindsubmit='submitaddgroup' report-submit="true">
+  <!-- 第一步 -->
+  <view hidden="{{color1==0}}">
+    <view style="background:#ffffff;margin:20rpx auto;">
+      <view style="width:100%;height:90rpx;border-bottom:1px solid #F0F0F0;position:relative;display:flex;justify-content:space-between;align-items:center;">
+        <input name="groupname" bindinput="titlecount" maxlength="16" style="width:600rpx;margin-left:30rpx;font-family:SourceHanSansCN-Regular;color:#1A1A1A;font-size:28rpx;" placeholder="请填写群名称" placeholder-class="colorb3_size28" value="{{groupname}}"/>
+        <text style="position:absolute;top:0;bottom:0;right:30rpx;;margin:auto;color:#B3B3B3;font-size:26rpx;line-height:90rpx;">{{groupnum}}/16</text>
+      </view>
+      <view style="padding: 30rpx 20rpx 40rpx;position:relative;">
+        <textarea name="introduction" bindinput="suggesttext" placeholder="请填写群简介" placeholder-class="colorb3_size28" placeholder-style="margin-left:10rpx;" maxlength="300" style="width:100%;height:268rpx;font-family:SourceHanSansCN-Regular;color:#1A1A1A;font-size:28rpx;margin-left:10rpx;" value="{{introduction}}"/>
+        <text style="line-height:564rpx;position:absolute;color:#B3B3B3;font-size:26rpx;top:0;bottom:0;right:30rpx;margin:auto;">{{fontnum}}/300</text>
+        <view class="suggestimglist">
+          <view wx:for="{{propagandaimg}}" style="background-image:url({{item}});" hidden="{{propagandaimg.length==0}}">
+            <image src="https://qmzgcdn.boc7.net/qmzq/promotionalmap1.png" bindtap="delpromotion" data-imgsrc="{{item}}"></image>
+          </view>
+          <image src="https://qmzgcdn.boc7.net/qmzq/addsuggestimg1.png" bindtap="addimg"></image>
+        </view>
+      </view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" style="width:100%;height:80rpx;line-height:80rpx;">
+        <image src="https://qmzgcdn.boc7.net/qmzq/{{region.length==0?'add_beforerelease':'add_afterrelease1'}}.png" style="width:18rpx;height:24rpx;margin-left:30rpx;margin-right:20rpx;float:left;margin-top:28rpx;"></image>
+        <view class="pickermode" style="color:{{region.length==0?'#B3B3B3':'#1A1A1A'}};">
+          {{region.length==0?'选择群所在位置':region[0]+'，'+region[1]+'，'+region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view style="background:#ffffff;padding-bottom: 8rpx;">
+      <view style="display:flex;justify-content:space-between;align-items:center;height:90rpx;line-height:90rpx;box-sizing:border-box;padding:0 30rpx;">
+        <text style="font-family:MicrosoftYaHei;font-size:28rpx;color:#1A1A1A;">群标签(最多设置3个)</text>
+        <text style="font-family:MicrosoftYaHei;font-size:26rpx;color:#B3B3B3;">{{labelcount}}/3</text>
+      </view>
+      <view class="labelgroup">
+        <button style="background: {{item.select==1?'#10B4FC':'#ffffff'}};color:{{item.select==1?'#ffffff':'#4D4D4D'}};border:{{item.select==1?'1px solid #10B4FC':'1px solid #9BC2D3'}};" wx:for="{{labelgroup}}" wx:for-index="key" bindtap="labelswitch" data-index="{{key}}">{{item.value}}</button>
+        <!-- <button style="background: #10B4FC;color:#ffffff;border:0;">福利</button> -->
+      </view>
+    </view>
+    <view style="background:#ffffff;height:90rpx;margin:20rpx 0 40rpx;display:flex;justify-content:flex-start;align-items:center;box-sizing:border-box;padding:0 30rpx;">
+      <text style="font-family:MicrosoftYaHei;font-size:28rpx;color:#1A1A1A;">群主电话</text>
+      <input name="mantelphone" style="width:500rpx;margin-left:52rpx;color:#1A1A1A;font-size:28rpx;" placeholder="选填" placeholder-class="colorb3_size28" placeholder-style="margin-top:2rpx;" type="number" value="{{mantelphone}}" bindinput="recordtel"/>
+    </view>
+    <button class="gotonext" bindtap='changecolor' data-index="2">下一步</button>
+  </view>
+  <!-- 第一步 -->
+  <!-- 第2步 -->
+  <view hidden="{{color2==0}}">
+    <view class="covergroupimg">
+      <view>群封面图（非必填）</view>
+      <view style="background-image:url({{coverimg?coverimg:'https://qmzgcdn.boc7.net/qmzq/uploadcoverpic.png'}});" bindtap='addgroupimg' data-type="cover">
+        <image src="https://qmzgcdn.boc7.net/qmzq/promotionalmap1.png" catchtap="delentity"  data-type="cover" hidden="{{coverimg==''}}"></image>
+      </view>
+    </view>
+    <view class="uploadqrcode">
+      <view>二维码（必填）</view>
+      <view>
+        <view>
+          <text>群二维码</text>
+          <view style="background-image:url({{groupqrimg?groupqrimg:'https://qmzgcdn.boc7.net/qmzq/uploadqrcode.png'}});" bindtap='addgroupimg' data-type="groupqr">
+            <image src="https://qmzgcdn.boc7.net/qmzq/promotionalmap1.png" catchtap="delentity" data-type="groupqr" hidden="{{groupqrimg==''}}"></image>
+          </view>
+        </view>
+        <view>
+          <text>群主二维码</text>
+          <view style="background-image:url({{themanqrimg?themanqrimg:'https://qmzgcdn.boc7.net/qmzq/uploadqrcode.png'}});" bindtap='addgroupimg' data-type="manqr">
+            <image src="https://qmzgcdn.boc7.net/qmzq/promotionalmap1.png" catchtap="delentity" data-type="manqr" hidden="{{themanqrimg==''}}"></image>
+          </view>
+        </view>
+      </view>
+      <view>注：群二维码有效期仅有7天，且100人以上群聊不能通过扫码加入。   
+为保证推广效果，请上传群主微信二维码，便于传播分享。
+      </view>
+    </view>
+    <button class="gotonext" bindtap='changecolor' data-index="3">下一步</button>
+  </view>
+  <!-- 第2步 -->
+  <!-- 第三步 -->
+  <view  hidden="{{color3==0}}">
+    <view style="width:100%;height:356rpx;background:#ffffff;margin-top:20rpx;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;box-sizing:border-box;padding:42rpx 30rpx 30rpx;">
+      <view style="display:flex;justify-content:flex-start;align-items:center;">
+        <image src="{{userinfo.headimg}}" style="width:64rpx;height:64rpx;border-radius:50%;"></image>
+        <view style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;margin-left:22rpx;">
+          <text style="font-family:SourceHanSansCN-Regular;font-size:28rpx;color:#1A1A1A;">{{userinfo.nickname}}</text>
+          <text style="font-family:SourceHanSansCN-Regular;font-size:26rpx;color:#999999;">发布预览</text>
+        </view>
+      </view>
+      <view style="display:flex;justify-content:flex-start;align-items:center;">
+        <image src="{{coverimg}}" style="width:186rpx;height:186rpx;"></image>
+        <view style="margin-left:32rpx;">
+          <text style="font-family:SourceHanSansCN-Regular;font-size:32rpx;color:#1A1A1A;">{{groupname}}</text>
+          <view style="display:flex;justify-content:flex-start;align-items:center;font-family:SourceHanSansCN-Regular;font-size:24rpx;color:#FF9642;margin:24rpx 0;">
+            <view style="padding:8rpx 18rpx;border:1px solid #FFBA42;border-radius:52rpx;margin:0 6rpx;" wx:for="{{labelgroup}}" wx:if="{{item.select==1}}">{{item.value}}</view>
+          </view>
+          <view style="display:flex;justify-content:flex-start;align-items:center;font-family:SourceHanSansCN-Regular;font-size:26rpx;color:#999999;">
+          <image src="https://qmzgcdn.boc7.net/qmzq/add_beforerelease.png" style="width:18rpx;height:24rpx;margin-right:10rpx;"></image>{{region.length>0?region[0]+region[1]+region[2]:''}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style="width:100%;background:#ffffff;margin-top:20rpx;box-sizing:border-box;padding:30rpx 0 18rpx;">
+      <view class="scantitle"><view></view>群介绍</view>
+      <view style="font-family:SourceHanSansCN-Regular;font-size:28rpx;color:#1A1A1A;margin-top:48rpx;margin-bottom:24rpx;padding:0 30rpx;">{{introduction}}</view>
+      <view style="display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;padding-left:18rpx;">
+        <image style="width:216rpx;height:216rpx;margin:12rpx 10rpx;" wx:for="{{propagandaimg}}" src="{{item}}" hidden="{{propagandaimg.length==0}}"></image>
+      </view>
+    </view>
+    <view style="width:100%;height:550rpx;background:#ffffff;margin-top:20rpx;box-sizing:border-box;padding:30rpx 0 40rpx;display:flex;flex-direction:column;justify-content:space-between;align-items:center;">
+      <view class="scantitle" style="align-self:flex-start;"><view></view>扫码加群</view>
+      <view class="scancodejoin">
+        <view>
+          <text>群二维码</text>
+          <image src="{{groupqrimg}}" bindtap="previewimg" data-url="{{groupqrimg}}"></image>
+          <text>保存图片后扫码加群</text>
+        </view>
+        <view>
+          <text>群主二维码</text>
+          <image src="{{themanqrimg}}" style="width:212rpx;height:212rpx;" bindtap="previewimg" data-url="{{themanqrimg}}"></image>
+          <text>保存图片后扫码加群主</text>
+        </view>
+      </view>
+    </view>
+    <view style="display:flex;justify-content:center;align-items:center;margin-top:44rpx;">
+      <button class="gotonext" style="width:300rpx;background:transparent;border:1px solid #10B4FC;color:#10B4FC;" bindtap='changecolor' data-index="1">返回编辑</button>
+      <button class="gotonext" style="width:300rpx;" formType="submit">确认发布</button>
+    </view>
+    <view style="display: flex;justify-content: center;align-items: center;margin-bottom:40rpx;">
+      <image hidden="{{rule_agree}}" bindtap="agreerule" style="width:24rpx;height:24rpx;border-redius:4rpx;" src="https://qmzgcdn.boc7.net/qmzq/notagree_rule.png"></image>
+      <image hidden="{{!rule_agree}}" bindtap="agreerule" style="width:24rpx;height:24rpx;border-redius:4rpx;" src="https://qmzgcdn.boc7.net/qmzq/agree_rule.png"></image>
+      <view style="font-family:MicrosoftYaHei;font-size:24rpx;color:#808080;margin-left:8rpx;">我已阅读并同意<text style="color:#10B4FC;" bindtap='closemask'>《全民找群发布规则》</text></view>
+    </view>
+  </view>
+  <!-- 第三步 -->
+</form>
+<view class='mask' hidden='{{masklayer}}'>
+  <view class="bags">
+    <image src="https://qmzgcdn.boc7.net/test/alert_close.png" class="closepos" bindtap='closemask'></image>
+    <text style="font-family:MicrosoftYaHei;font-size:32rpx;color:#1A1A1A;">全民找群发布规则</text>
+    <text style="font-family:MicrosoftYaHei;font-size:24rpx;color:#808080;">1、由于微信群的二维码有效期最长是7天，如果您扫描二维码时出现二维码已过期，请直接扫微信群主二维码，让群主拉你进入微信群。
+2、平台所有内容和二维码均为用户发布，本站无法审查其内部有无违法信息与真实性，请各位网民仔细辨别。
+    </text>
+  </view>
+</view>
+<!-- 提交成功后 -->
+<view hidden="{{!is_submit}}" class="aftersubmit" style="height:{{skinheight}};">
+  <view style="background-image:url({{coverimg}});">
+    <navigator url="../groupdetail/groupdetail?id={{groupid}}" open-type='navigate'>查看群详情></navigator>
+  </view>
+  <view>
+    <text style="font-family:MicrosoftYaHei;font-size:30rpx;color:#1A1A1A;">群聊已提交成功，等待审核</text>
+    <text style="font-family:MicrosoftYaHei;font-size:26rpx;color:#808080;margin-top:8rpx;">审核通过前即可分享推广</text>
+  </view>
+  <view>
+    <button class="gotonext" style="width:310rpx;background:transparent;border:1px solid #10B4FC;color:#10B4FC;" bindtap='navigatetopage' data-navito="index">返回首页</button>
+      <button class="gotonext" style="width:310rpx;margin-left:30rpx;" bindtap="navigatetopage">继续发布</button>
+  </view>
+</view>
+<!-- 提交成功后 -->

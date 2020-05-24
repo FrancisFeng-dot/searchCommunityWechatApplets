@@ -1,0 +1,142 @@
+<view class='container'>
+  <scroll-view>
+    <view class='user-main'>
+      <view>
+        <image class='user-main-head' src='{{group.headimgurl}}'></image>
+      </view>
+      <view class='user-main-data'>
+        <view class='data-nickname'>{{group.nickname}}</view>
+        <view class='data-issue-time'>{{group.ctime}} 发布</view>
+      </view>
+      <view>
+        <image class='user-main-share' src='../../img/icon_group_share.png' hidden='{{showGeneralize}}' bindtap="showShare"></image>
+      </view>
+    </view>
+
+    <view class='game-theme-main'>
+      <image class='game-iamge' src='{{group.group_logo}}'></image>
+      <view class='game-data-main'>
+        <view class='data-gamename'>{{group.group_name}}</view>
+        <view class='data-label-main' wx:for="{{group.tag}}" wx:key="index">
+          <view class='label-item'>{{item.tag_name}}</view>
+        </view>
+        <view class='data-position-main'>
+          <image src='../../img/icon_group_location.png'></image>
+          <view>{{group.location}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='container-line'></view>
+
+    <view class='nav-main'>
+      <view class='tipColorViewStyle'></view>
+      <text class='tipTextStyle'>群介绍</text>
+    </view>
+
+    <view class='group-introduce'>{{group.group_desc}}</view>
+
+    <view class='group-image-main'>
+      <view class='group-image-item' wx:for="{{group.img}}" wx:key="index">
+        <image class='group-image' src='{{item}}' mode='aspectFill'></image>
+      </view>
+    </view>
+
+
+    <view class='container-line'></view>
+
+    <view class='nav-main'>
+      <view class='tipColorViewStyle'></view>
+      <text class='tipTextStyle'>扫码加群</text>
+    </view>
+
+    <view class='code-main'>
+      <view class='code-group'>
+        <view class='code-group-title'>群二维码</view>
+        <image class='code-group-owner' src='{{group.group_qr1}}' data-src="{{group.group_qr1}}" mode='aspectFit' bindtap='showBigPhoto'></image>
+        <view class='code-group-content'>保存图片后扫码加群</view>
+      </view>
+
+      <view class='code-group'>
+        <view class='code-group-title'>群主二维码</view>
+        <image class='code-group-owner' src='{{group.group_owner_qr}}' data-src="{{group.group_owner_qr}}" bindtap='showBigPhoto'></image>
+        <view class='code-group-content'>保存图片后扫码加群主</view>
+      </view>
+    </view>
+
+
+    <view class='call-owner-main' hidden='{{showCall}}' bindtap="showCall">
+      <view class='call-owner-item'>
+        <image src='../../img/icon_group_call.png'></image>
+        <text>联系群主</text>
+      </view>
+    </view>
+
+    <view class='nav-main'>
+      <view class='tipColorViewStyle'></view>
+      <text class='tipTextStyle'>规则说明</text>
+    </view>
+
+    <view class='group-rule-mian'>{{rule}}</view>
+
+    <view class='container-line'></view>
+
+    <view class='group-bottom-view'></view>
+  </scroll-view>
+
+  <view class='bottom-main' hidden='{{showGeneralize}}'>
+    <view class='group-bottom-menu1' bindtap="showAddGroup">一键加群</view>
+    <view class='group-bottom-menu2' bindtap="showShare">分享推广</view>
+  </view>
+
+  <view class='bottom-main2' hidden='{{showEdit}}'>
+    <view class='group-bottom-rule'>
+      <image src='../../img/icon_index.png'></image>
+      <text>发布规则</text>
+    </view>
+    <view class='group-bottom-menu3' bindtap="jumpedit">重新编辑</view>
+  </view>
+
+  <view class='group-edit-main' hidden='!{{is_self}}' bindtap="jumpedit">
+    <image src='../../img/icon_group_edit.png'></image>
+    <text>编辑</text>
+  </view>
+</view>
+
+<!-- 弹窗部分 -->
+<!-- 加群 -->
+<view class="modal-box" hidden="{{showAddDialog}}" bindtap="hide">
+  <view class='add-group-dialog-main'>
+    <text>在客服会话页面回复“1”，加入助攻拼团群</text>
+    <button open-type="contact" session-from="{{group.group_key}}" bindtap='hide'>确定</button>
+  </view>
+</view>
+<!-- 打电话 -->
+<view class="modal-box" hidden="{{showCallDialog}}" bindtap="hide">
+  <view class='call-phone-dialog-main'>
+    <view class='call-dialog-title'>温馨提示</view>
+    <text>你将要拨打电话：{{group.group_tel}}</text>
+    <view class='call-dialog-button-main'>
+      <view class='confirm-button' bindtap='calling'>确定</view>
+      <view class='cancel-button'>取消</view>
+    </view>
+  </view>
+</view>
+<!-- 分享 -->
+<view class="modal-box" hidden="{{showShare}}" bindtap="hide">
+  <view class='share-mian'>
+    <button class='share-item-root' open-type='share'>
+      <view class='share-item'>
+        <image class='share-item-logo' src='https://qmzgcdn.boc7.net/qmzq/icon_share_wechat_logo.png'></image>
+        <button class='share-item-button' open-type='share'>邀请微信好友</button>
+      </view>
+    </button>
+    <navigator class='share-item-root' url="{{hastoken==1?'../sharepng/sharepng?id='+groupid:'../login/login'}}" open-type="navigate">
+      <view class='share-item'>
+        <image class='share-item-logo' src='https://qmzgcdn.boc7.net/qmzq/icon_share_image_logo.png'></image>
+        <button class='share-item-button' bindtap='shareImage'>生成分享图片</button>
+      </view>
+    </navigator>
+    <view class="share-dialog-close" bindtap="hide">关闭</view>
+  </view>
+</view>

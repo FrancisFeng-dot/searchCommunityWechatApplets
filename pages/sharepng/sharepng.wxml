@@ -1,0 +1,34 @@
+<!--pages/sharepng/sharepng.wxml-->
+<view class="poster">
+  <view>
+    <image src="{{userinfo.headimg}}"></image>
+  </view>
+  <text>{{userinfo.nickname}}</text>
+  <text>向你推荐了一个群聊</text>
+  <view>
+    <view>
+      <image src="{{group.group_logo}}"></image>
+      <view>
+        <text>{{group.group_name}}</text>
+        <view>
+          <image src="https://qmzgcdn.boc7.net/qmzq/add_beforerelease.png"></image>
+          <text>{{group.location}}</text>
+        </view>
+      </view>
+    </view>
+    <text>{{group.group_desc}}</text>
+  </view>
+  <view>
+    <image src="{{qr_code}}"></image>
+  </view>
+  <text>长按扫码 一键进入群聊</text>
+</view>
+<button id="saveimage" bindtap="saveimg" class="savebutton">保存图片</button>
+<view style="width:0px;height:0px;overflow:hidden;position:fixed;bottom:-500px;">
+  <canvas canvas-id="shareCanvas" style="width: 345px;height: 490px;"></canvas>
+</view>
+<view style="top:0;background:#333333;width:100%;height:100%;position:fixed;z-index:1;" hidden="{{loadingHidden}}">
+  <loading>
+      加载中...
+  </loading>
+</view>

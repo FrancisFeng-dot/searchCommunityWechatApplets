@@ -1,0 +1,60 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx956a48808db9c384",
+	"projectname": "%E5%85%A8%E6%B0%91%E6%89%BE%E7%BE%A4",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "盒子",
+					"pathName": "pages/prize/prize",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "是的发送到发阿萨德发",
+					"pathName": "pages/index/index",
+					"query": "name=333",
+					"scene": "1037",
+					"referrerInfo": {
+						"appId": "wx956a48808db9c384",
+						"extraData": "{\"ogid\":5}"
+					}
+				}
+			]
+		}
+	}
+}

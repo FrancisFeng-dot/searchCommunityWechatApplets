@@ -1,0 +1,43 @@
+<!--pages/appstatus/appstatus.wxml-->
+<block wx:if="{{myselfgroup}}">
+  <view class="groupuptodate" wx:for="{{myselfgroup}}">
+    <view>
+      <image src="{{item.group_logo}}"></image>
+      <view>
+        <text>{{item.group_name}}</text>
+        <view>
+          <view wx:for="{{item.tag}}" wx:for-item="tag">{{tag.tag_name}}</view>
+        </view>
+        <text>{{item.group_desc}}</text>
+      </view>
+    </view>
+    <view>
+      <view>
+        <image src="https://qmzgcdn.boc7.net/qmzq/add_beforerelease.png"></image>
+        <text>{{item.location}}</text>
+      </view>
+      <text>{{item.ctime}}{{item.status==1?'发布':'提交'}}</text>
+      <view></view>
+    </view>
+    <view>
+      <block wx:if="{{item.status==1}}"><text>已发布</text></block>
+      <block wx:if="{{item.status==0}}"><text>待审核</text></block>
+      <block wx:if="{{item.status==2}}"><text>未通过</text></block>
+      <view>
+        <view style="background:#ffffff;color:#00B1FF;border:1px solid #00BFFF;text-align: center;" bindtap="jumpedit" data-id="{{item.id}}">编辑</view>
+        <block wx:if="{{item.status==2}}">
+          <button style="background:#B3B3B3;">发布失败</button>
+        </block>
+        <block wx:else>
+          <button open-type='share'>分享推广</button>
+        </block>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{myselfgroup.length==0}}">
+  <view class="norecord">
+    <image src="https://qmzgcdn.boc7.net/qmzq/norecord1.png"></image>
+    <text>暂无待审核的微信群</text>
+  </view>
+</block>

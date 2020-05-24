@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sharepng/sharepng",
+    "pages/index/choicelabel",
+    "pages/appstatus/appstatus",
+    "pages/usercenter/usercenter",
+    "pages/index/tutorialjoing",
+    "pages/releasegroup/releasegroup",
+    "pages/login/login",
+    "pages/groupdetail/groupdetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#ffffff",
+    "backgroundColorTop": "#ffffff",
+    "navigationBarBackgroundColor": "#10B4FC",
+    "navigationBarTitleText": "全民找群",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#10B4FC",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "全民找群",
+        "iconPath": "img/icon_unpeoplefind.png",
+        "selectedIconPath": "img/icon_peoplefind.png"
+      },
+      {
+        "pagePath": "pages/releasegroup/releasegroup",
+        "text": "发布",
+        "iconPath": "img/icon_unrelease.png",
+        "selectedIconPath": "img/icon_release.png"
+      },
+      {
+        "pagePath": "pages/usercenter/usercenter",
+        "text": "我的",
+        "iconPath": "img/icon_unmyself.png",
+        "selectedIconPath": "img/icon_myself.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx915d2fab1028ac00"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

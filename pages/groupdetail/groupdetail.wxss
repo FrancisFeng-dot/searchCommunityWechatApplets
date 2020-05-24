@@ -1,0 +1,631 @@
+page {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-main {
+  height: 110rpx;
+  width: 100%;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.user-main-head {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+
+.user-main-data {
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.data-nickname {
+  font-size: 28rpx;
+  font-family: MicrosoftYaHei;
+  color: rgba(26, 26, 26, 1);
+}
+
+.data-issue-time {
+  font-size: 26rpx;
+  margin-top: 12rpx;
+  font-family: SourceHanSansCN-Regular;
+  color: rgba(153, 153, 153, 1);
+}
+
+.user-main-share {
+  width: 36rpx;
+  height: 33rpx;
+  margin-right: 30rpx;
+}
+
+.game-theme-main {
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+}
+
+.game-iamge {
+  width: 186rpx;
+  height: 186rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  border-radius: 8rpx;
+}
+
+.game-data-main {
+  flex-direction: column;
+}
+
+.data-gamename {
+  font-size: 32rpx;
+  font-family: SourceHanSansCN-Regular;
+  color: rgba(26, 26, 26, 1);
+}
+
+.data-label-main {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  float: left;
+}
+
+.label-item {
+  border: 1rpx solid rgba(255, 186, 66, 1);
+  border-radius: 18rpx;
+  font-size: 24rpx;
+  font-family: SourceHanSansCN-Regular;
+  color: rgba(255, 150, 66, 1);
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  padding-bottom: 5rpx;
+  padding-top: 5rpx;
+  margin-right: 10rpx;
+}
+
+.data-position-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  clear: both;
+}
+
+.data-position-main>image {
+  width: 18rpx;
+  height: 23rpx;
+}
+
+.data-position-main>view {
+  font-size: 26rpx;
+  font-family: SourceHanSansCN-Regular;
+  color: rgba(153, 153, 153, 1);
+  margin-left: 10rpx;
+}
+
+.container-line {
+  width: 100%;
+  height: 20rpx;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.nav-main {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  background: #fff;
+}
+
+.nav-main>view {
+  width: 7rpx;
+  height: 30rpx;
+  background: rgba(16, 180, 252, 1);
+  border-radius: 3rpx;
+  margin-left: 30rpx;
+}
+
+.nav-main>text {
+  font-size: 32rpx;
+  font-family: SourceHanSansCN-Regular;
+  color: rgba(26, 26, 26, 1);
+  line-height: 44rpx;
+  margin-left: 12rpx;
+}
+
+.group-introduce {
+  font-size: 28rpx;
+  font-family: SourceHanSansCN-Regular;
+  color: rgba(26, 26, 26, 1);
+  line-height: 44rpx;
+  padding: 30rpx;
+  background: #fff;
+}
+
+.group-image-main {
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background: #fff;
+}
+
+.group-image-item {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 33.33333333%;
+  float: left;
+  align-items: center;
+  padding-bottom: 16rpx;
+}
+
+.group-image {
+  width: 216rpx;
+  height: 216rpx;
+}
+
+.code-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.code-group {
+  width: 276rpx;
+  height: 390rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.09);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.code-group-title {
+  font-size: 28rpx;
+  font-family: SourceHanSansCN-Regular;
+  color: rgba(26, 26, 26, 1);
+}
+
+.code-group-content {
+  font-size: 22rpx;
+  font-family: SourceHanSansCN-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+.code-group-image {
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+  width: 141rpx;
+  height: 212rpx;
+}
+
+.code-group-owner {
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+  width: 212rpx;
+  height: 212rpx;
+}
+
+.call-owner-main {
+  width: 100%;
+  height: 86rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.call-owner-item {
+  width: 600rpx;
+  height: 86rpx;
+  background: rgba(242, 245, 247, 1);
+  border-radius: 43rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.call-owner-item>image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.call-owner-item>text {
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  font-family: MicrosoftYaHei;
+  color: rgba(16, 180, 252, 1);
+  line-height: 70rpx;
+}
+
+.group-rule-mian {
+  padding: 30rpx;
+  font-size: 24rpx;
+  font-family: MicrosoftYaHei;
+  color: rgba(128, 128, 128, 1);
+  line-height: 42rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-bottom-view {
+  width: 100%;
+  height: 144rpx;
+}
+
+.bottom-main {
+  position: fixed;
+  bottom: 0;
+  height: 144rpx;
+  background: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bottom-main2 {
+  position: fixed;
+  bottom: 0;
+  height: 144rpx;
+  background: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 40rpx;
+}
+
+/* 一键加群 */
+
+.group-bottom-menu1 {
+  width: 310rpx;
+  height: 86rpx;
+  background: rgba(16, 180, 252, 1);
+  border-radius: 43rpx;
+  font-size: 30rpx;
+  font-family: MicrosoftYaHei;
+  color: rgba(255, 255, 255, 1);
+  line-height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-bottom-menu2 {
+  width: 310rpx;
+  height: 86rpx;
+  background: rgba(250, 173, 25, 1);
+  border-radius: 43rpx;
+  font-size: 30rpx;
+  font-family: MicrosoftYaHei;
+  color: rgba(255, 255, 255, 1);
+  line-height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-bottom-menu3 {
+  width: 540rpx;
+  height: 86rpx;
+  background: rgba(16, 180, 252, 1);
+  border-radius: 43rpx;
+  font-size: 30rpx;
+  font-family: MicrosoftYaHei;
+  color: rgba(255, 255, 255, 1);
+  line-height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 33rpx;
+}
+
+.group-bottom-rule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-bottom-rule>text {
+  font-size: 22rpx;
+  font-family: MicrosoftYaHei;
+  color: rgba(77, 77, 77, 1);
+  margin-top: 10rpx;
+}
+
+.group-bottom-rule>image {
+  width: 36rpx;
+  height: 41rpx;
+}
+
+.group-edit-main {
+  width: 100rpx;
+  height: 100rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 5rpx 16rpx 0rpx rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 250rpx;
+  right: 24rpx;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-edit-main>image {
+  width: 34rpx;
+  height: 37rpx;
+}
+
+.group-edit-main>text {
+  font-size: 20rpx;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: rgba(77, 77, 77, 1);
+  margin-top: 5rpx;
+}
+
+/**
+*/
+
+.modal-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body {
+  position: relative;
+}
+
+.modal-content {
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+
+.add-group-dialog-main {
+  width: 600rpx;
+  height: 280rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 16rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-group-dialog-main>text {
+  font-size: 26rpx;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  line-height: 34rpx;
+}
+
+.add-group-dialog-main>button {
+  margin-top: 40rpx;
+  width: 300rpx;
+  height: 68rpx;
+  background: rgba(16, 180, 252, 1);
+  border-radius: 34rpx;
+  font-size: 26rpx;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 70rpx;
+}
+
+.call-phone-dialog-main {
+  width: 580rpx;
+  height: 290rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 16rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.call-dialog-title {
+  font-size: 32rpx;
+  font-family: SourceHanSansCN-Regular;
+  font-weight: 400;
+  color: rgba(26, 26, 26, 1);
+  line-height: 44rpx;
+  margin-top: 60rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.call-phone-dialog-main>text {
+  font-size: 28rpx;
+  font-family: SourceHanSansCN-Regular;
+  font-weight: 400;
+  color: rgba(128, 128, 128, 1);
+  line-height: 44rpx;
+  margin-top: 26rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.call-dialog-button-main {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  margin-top: 20rpx;
+}
+
+.confirm-button {
+  width: 100rpx;
+  height: 60rpx;
+  /* background: rgba(16, 180, 252, 1); */
+  font-size: 32rpx;
+  font-family: SourceHanSansCN-Regular;
+  font-weight: 400;
+  color: rgba(70, 180, 49, 1);
+  line-height: 44rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-right: 50rpx;
+}
+
+.cancel-button {
+  width: 100rpx;
+  height: 60rpx;
+  /* background: rgba(16, 180, 252, 1); */
+  font-size: 32rpx;
+  font-family: SourceHanSansCN-Regular;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 1);
+  line-height: 44rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-mian {
+  width: 100%;
+  background: #f7f7f7;
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-item-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-item-root {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: rgba(255, 255, 255, 1);
+  margin-bottom: 1rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border:0;
+  border-radius: 0;
+}
+
+.share-item-root::after {
+  border:0;
+}
+
+.share-item {
+  height: 100rpx;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-item-logo {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.share-item-button {
+  height: 100rpx;
+  background: rgba(255, 255, 255, 1);
+  font-size: 32rpx;
+  font-family: MicrosoftYaHei;
+  color: rgba(38, 28, 11, 1);
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 0;
+}
+
+.share-item-button::after {
+  border: none;
+}
+
+.share-item-line {
+  width: 100%;
+  height: 1rpx;
+  background: #f7f7f7;
+}
+
+.share-dialog-close {
+  width: 100%;
+  margin-top: 10rpx;
+  height: 100rpx;
+  background: rgba(255, 255, 255, 1);
+  font-size: 32rpx;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: rgba(38, 28, 11, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

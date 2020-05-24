@@ -1,0 +1,59 @@
+<!--pages/index/choicelabel.wxml-->
+<view class="searchgroup">
+  <view>
+    <image src="https://qmzgcdn.boc7.net/qmzq/searchframe1.png"></image>
+    <input name="searchcode" bindconfirm="focusinput" bindinput="getscan" placeholder="搜索群名、关键词" placeholder-style="font-family:SourceHanSansCN-Regular;font-size:28rpx;color:#B3B3B3;" confirm-type="search" value="{{labelcontent}}"></input>
+  </view>
+  <view bindtap="focusinput">搜索</view>
+</view>
+<view style="box-sizing:border-box;padding:0 30rpx;margin-top:12rpx;">
+  <text style="font-family:SourceHanSansCN-Regular;font-size:28rpx;color:#666666;">热门搜索</text>
+  <view class="choicelabel">
+    <view wx:for="{{labelgroup}}" wx:for-item="tag" wx:for-index="key" data-content="{{key}}" bindtap="focusinput">{{tag.tag_name}}</view>
+  </view>
+</view>
+<block wx:if="{{uptodategroup}}">
+  <view class="groupuptodate" wx:for="{{uptodategroup}}">
+    <view>
+      <view>
+        <image src="{{item.headimgurl}}"></image>
+        <view>
+          <text>{{item.nickname}}</text>
+          <text>{{item.ctime}}发布</text>
+        </view>
+      </view>
+      <button bindtap='closemask'></button>
+    </view>
+    <view>
+      <image src="{{item.group_logo}}"></image>
+      <view>
+        <text>{{item.group_name}}</text>
+        <view>
+          <view wx:for="{{item.tag}}" wx:for-item="tag">{{tag.tag_name}}</view>
+        </view>
+        <text>{{item.group_desc}}</text>
+      </view>
+    </view>
+    <view>
+      <view></view>
+      <view>
+        <image src="https://qmzgcdn.boc7.net/qmzq/add_beforerelease.png"></image>
+        <text>{{item.location}}</text>
+      </view>
+      <navigator url="../groupdetail/groupdetail?id={{item.id}}" open-type='navigate' style="margin-top:0;">一键加群</navigator>
+    </view>
+  </view>
+</block>
+<!-- <block wx:if="{{uptodategroup.length==0}}">
+  <view class="norecord">
+    <image src="https://qmzgcdn.boc7.net/qmzq/norecord1.png"></image>
+    <text>没有找到相关的微信群</text>
+  </view>
+</block> -->
+<view class='mask' hidden='{{masklayer}}'>
+  <view class="share_button">
+    <button open-type='share'>邀请微信好友</button>
+    <!-- <navigator url="{{hastoken==1?'../sharepng/sharepng?id='+lotteryid:'../login/login'}}" open-type="navigate" style="line-height:100rpx;text-align:center;background-image: url('https://qmzgcdn.boc7.net/qmzq/invite_poster1.png');background-position: 204rpx 24rpx;">生成分享图片</navigator> -->
+    <button style="margin-top:20rpx;background-image: url('');" bindtap="closemask">取消</button>
+  </view>
+</view>
